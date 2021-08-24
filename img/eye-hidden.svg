@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.726" height="18.706" viewBox="0 0 27.726 18.706">
+  <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(1.363 1)">
+    <g id="Icon_feather-eye" data-name="Icon feather-eye" transform="translate(0.029 -6)">
+      <path id="Path_791" data-name="Path 791" d="M1.5,14.353S5.677,6,12.986,6s11.486,8.353,11.486,8.353-4.177,8.353-11.486,8.353S1.5,14.353,1.5,14.353Z" fill="none" stroke="#7279ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_792" data-name="Path 792" d="M19.765,16.632A3.132,3.132,0,1,1,16.632,13.5,3.132,3.132,0,0,1,19.765,16.632Z" transform="translate(-3.647 -2.279)" fill="none" stroke="#7279ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <line id="Line_10" data-name="Line 10" y1="14.147" x2="25" transform="translate(0 1.706)" fill="none" stroke="#7279ff" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="left-section">
+                    <img src="img/Group 767.svg" alt="">
+                </div>
+                <div class="right-section">
+                    <a href="#" class="burger"><img src="img/Icon metro-menu.svg" alt=""></a>
+                    <ul class="main-nav">
+                        <li><a href="#">ჩვენზე</a></li>
+                        <li><a href="#">თემები</a></li>
+                        <li><a href="#">რესურსები</a></li>
+                    </ul>
+                    <a href="#" class="login"><img src="img/Icon metro-user.svg" alt="user"> შესვლა</a>
+                    <form action="GET" autocomplete="off">
+                        <input type="search" name="search" id="search">
+                        <button type="button"><img src="img/Icon feather-search.svg" alt="search"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="burger-menu">
+                <ul class="burger-list">
+                    <li><a href="#">ჩვენზე</a></li>
+                    <li><a href="#">თემები</a></li>
+                    <li><a href="#">რესურსები</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container1">
+            <div class="title">
+                <h1>რეგისტრაცია</h1>
+                <p>ავტორიზაცია შესაძლებელია მხოლოდ განმანათლებლებისთვის</p>
+            </div>
+            <form action="POST" autocomplete="off">
+                <label for="region">რეგიონი <span>*</span></label>
+                <div class="custom-select" id="select_region">
+                    <p class="select"><span class="txt">აირჩიეთ რეგიონი</span> <img src="img/Icon material-arrow-drop-down.svg" alt="arrow"></p>
+                    <input type="hidden" name="region" value="">
+                    <ul class="options" id="option_region">
+                        <li data-id="1">თბილისი</li>
+                        <li data-id="2">აფხაზეთი</li>
+                        <li data-id="3">აჭარა</li>
+                        <li data-id="4">გურია</li>
+                        <li data-id="5">იმერეთი</li>
+                        <li data-id="6">მცხეთა-მთიანეთი</li>
+                        <li data-id="7">რაჭა-ლეჩხუმი და ქვემო სვანეთი</li>
+                        <li data-id="8">სამეგრელო-ზემო სვანეთი</li>
+                        <li data-id="9">სამცხე-ჯავახეთი</li>
+                        <li data-id="10">ქვემო ქართლი</li>
+                        <li data-id="11">შიდა ქართლი</li>
+                    </ul>
+                </div>
+                <label for="position">პოზიცია <span>*</span></label>
+                <div class="custom-select" id="select_position">
+                    <p class="select"><span class="txt">აირჩიეთ პოზიცია</span> <img src="img/Icon material-arrow-drop-down.svg" alt="arrow"></p>
+                    <input type="hidden" name="position" value="">
+                    <ul class="options" id="option_position">
+                        <li data-id="1">მასწავლებელი</li>
+                        <li data-id="2">სამართალდამცველი</li>
+                        <li data-id="3">სხვა</li>
+                    </ul>
+                </div>
+                <label for="adress">სამუშაო ადგილი</label>
+                <input type="text" name="adress" id="adress">
+                <label for="email">ელ:ფოსტა <span>*</span></label>
+                <input type="email" name="email" id="email" value="">
+                <label for="name">სახელი <span>*</span></label>
+                <input type="text" name="name" id="name" value="">
+                <label for="second-name">გვარი <span>*</span></label>
+                <input type="text" name="second-name" id="second-name" value="">
+                <div class="passwords">
+                    <div class="pass">
+                        <label for="pass">პაროლი <span>*</span></label>
+                        <input type="password" name="pass" id="pass" class="passw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" value="" onkeyup='check();'>
+                        <span class="icon"><i class="bi bi-eye-slash"></i></span>
+                    </div>
+                    <div class="message">
+                        <span id="warning"></span>
+                    </div>
+                    <div class="pass">
+                        <label for="pass1">გაიმეორეთ პაროლი <span>*</span></label>
+                        <input type="password" name="pass1" id="pass1" class="passw" value="" onkeyup='check();'>
+                        <span class="icon"><i class="bi bi-eye-slash"></i></span>
+                    </div>
+                    <span id='message'></span>
+                </div>
+                <div class="agree">
+                    <div>
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">ვეთანხმები პლატფორმის <a href="#">მოხმარების პირობებს</a></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="politics" id="politics" checked>
+                        <label for="politics">გავეცანი <a href="#">კონფიდენციალურობის პოლიტიკას</a></label>
+                    </div>
+                </div>
+                <button id="register">რეგისტრაცია</button>
+            </form>
+            <div class="social">
+                <div class="or">
+                    <div class="line"></div>
+                    <span>ან</span>
+                    <div class="line"></div>
+                </div>
+                <a href="#" class="fb btn">
+                    <img src="img/Icon awesome-facebook-f.svg" alt=""> რეგისტრაცია Facebook-ით
+                </a>
+                <a href="#" class="google btn">
+                    <img src="img/Icon simple-google.svg" alt=""> რეგისტრაცია Gmail-ით
+                </a>
+                <span>უკვე რეგისტრირებული ხარ? <a href="#">მიყევი ბმულს</a></span>
+            </div>
+        </div>
+    </section>
+    <div id="myPopup" class="popUp">
+        <div class="popUp-content">
+          <span class="close">&times;</span>
+          <h1>რეგისტრაცია</h1>
+          <ul>
+              <li>სახელი: <span id="input-name"></span></li>
+              <li>გვარი: <span id="input-second-name"></span></li>
+              <li>რეგიონი: <span id="input-region"></span></li>
+              <li>პოზიცია: <span id="input-position"></span></li>
+              <li>ელ:ფოსტა: <span id="input-email"></span></li>
+          </ul>
+        </div>
+      </div>
+    <footer>
+        <div class="container1">
+            <div class="contact">
+                <ul class="social-contact">
+                    <li><a href="mailto: info@school.ge">info@school.ge</a></li>
+                    <li><a href="#"><img src="img/facebook.svg" alt="facebook"></a><a href="#"><img src="img/Component 2 – 1.svg" alt=""></a></li>
+                </ul>
+                <ul class="last-list">
+                    <li><a href="#">მოხმარების პირობები</a></li>
+                    <li><a href="#">კონფიდენციალურობა</a></li>
+                    <li><a href="#">© 2021 ყველა უფლება დაცულია</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

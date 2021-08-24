@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'FiraGO';
+    src: url('../fonts/FiraGO-Light.eot');
+    src: url('../fonts/FiraGO-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FiraGO-Light.woff2') format('woff2'),
+        url('../fonts/FiraGO-Light.woff') format('woff'),
+        url('../fonts/FiraGO-Light.ttf') format('truetype'),
+        url('../fonts/FiraGO-Light.svg#FiraGO-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
